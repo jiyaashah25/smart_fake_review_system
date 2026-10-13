@@ -1,0 +1,91 @@
+{
+  "model_name": "Logistic Regression",
+  "version": "1.0.0",
+  "training_timestamp": "2026-10-13T14:15:45.624756+00:00",
+  "dataset_info": {
+    "total_samples": 1596,
+    "train_samples": 1276,
+    "test_samples": 320,
+    "genuine_samples": 796,
+    "fake_samples": 800,
+    "train_test_split": "80/20 Stratified",
+    "source": "Ott et al. Deceptive Opinion Spam Benchmark"
+  },
+  "feature_extraction": {
+    "method": "TF-IDF (Term Frequency-Inverse Document Frequency)",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 15000,
+    "sublinear_tf": true,
+    "min_df": 2
+  },
+  "test_metrics": {
+    "accuracy": 0.9031,
+    "precision": 0.9057,
+    "recall": 0.9,
+    "f1_score": 0.9028,
+    "confusion_matrix": {
+      "true_negative": 145,
+      "false_positive": 15,
+      "false_negative": 16,
+      "true_positive": 144,
+      "raw_matrix": [
+        [
+          145,
+          15
+        ],
+        [
+          16,
+          144
+        ]
+      ]
+    },
+    "support": {
+      "total_samples": 320,
+      "genuine_count": 160,
+      "fake_count": 160
+    },
+    "roc_auc": 0.9486
+  },
+  "all_models_compared": [
+    {
+      "model_name": "Logistic Regression",
+      "train_duration_sec": 5.28,
+      "cv_accuracy_mean": 0.8887,
+      "cv_accuracy_std": 0.0179,
+      "cv_f1_mean": 0.8886,
+      "test_accuracy": 0.9031,
+      "test_precision": 0.9057,
+      "test_recall": 0.9,
+      "test_f1_score": 0.9028,
+      "test_roc_auc": 0.9486
+    },
+    {
+      "model_name": "Multinomial Naive Bayes",
+      "train_duration_sec": 5.42,
+      "cv_accuracy_mean": 0.8895,
+      "cv_accuracy_std": 0.0187,
+      "cv_f1_mean": 0.8935,
+      "test_accuracy": 0.8844,
+      "test_precision": 0.8475,
+      "test_recall": 0.9375,
+      "test_f1_score": 0.8902,
+      "test_roc_auc": 0.9504
+    },
+    {
+      "model_name": "Calibrated LinearSVC",
+      "train_duration_sec": 6.19,
+      "cv_accuracy_mean": 0.8918,
+      "cv_accuracy_std": 0.0183,
+      "cv_f1_mean": 0.8915,
+      "test_accuracy": 0.8875,
+      "test_precision": 0.878,
+      "test_recall": 0.9,
+      "test_f1_score": 0.8889,
+      "test_roc_auc": 0.9497
+    }
+  ],
+  "disclaimer": "ReviewGuard AI provides automated predictions based on learned patterns in review data. Results are indicative and should not be treated as definitive proof of review fraud."
+}

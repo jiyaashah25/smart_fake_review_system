@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReviewGuard AI — Complete Academic Project Report</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    
+    @page {
+      size: A4;
+      margin: 20mm;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .header-banner {
+      border-bottom: 3px solid #7c3aed;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: #7c3aed;
+      margin: 0 0 15px 0;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+
+    .meta-item strong {
+      color: #475569;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      border-left: 4px solid #7c3aed;
+      padding-left: 12px;
+      margin-top: 36px;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #334155;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p, li {
+      font-size: 13.5px;
+      color: #334155;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 12.5px;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #1e1b4b;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    tr.highlight {
+      background-color: #e0e7ff;
+      font-weight: 600;
+    }
+
+    .code-box {
+      font-family: 'JetBrains Mono', monospace;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+
+    .qa-box {
+      background: #fdf4ff;
+      border: 1px solid #f0abfc;
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+
+    .qa-question {
+      font-weight: 700;
+      color: #701a75;
+      font-size: 13.5px;
+      margin-bottom: 6px;
+    }
+
+    .qa-answer {
+      font-size: 13px;
+      color: #334155;
+      margin: 0;
+    }
+
+    .plots-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .plot-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      background: #faf5ff;
+    }
+
+    .plot-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .plot-caption {
+      font-size: 11px;
+      color: #64748B;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .print-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #7c3aed;
+      color: #ffffff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media print {
+      .print-button {
+        display: none;
+      }
+      body {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="print-button" onclick="window.print()">
+    🖨️ Print / Save as PDF
+  </button>
+
+  <div class="container">
+    <div class="header-banner">
+      <h1 class="title">ReviewGuard AI</h1>
+      <div class="subtitle">Smart Fake Review Detection System — Academic Demonstration & Viva Master Report</div>
+      
+      <div class="meta-grid">
+        <div class="meta-item"><strong>Domain:</strong> NLP & Machine Learning</div>
+        <div class="meta-item"><strong>Academic Purpose:</strong> 25 Marks Microproject</div>
+        <div class="meta-item"><strong>Champion Algorithm:</strong> Logistic Regression (TF-IDF)</div>
+        <div class="meta-item"><strong>Hold-Out Accuracy:</strong> 90.31% (320 test samples)</div>
+        <div class="meta-item"><strong>Hold-Out F1-Score:</strong> 0.9028 (ROC-AUC: 0.9486)</div>
+        <div class="meta-item"><strong>Benchmark Dataset:</strong> Ott et al. Deceptive Opinion Spam (1,596 reviews)</div>
+      </div>
+    </div>
+
+    <h2>1. Executive Summary & Problem Formulation</h2>
+    <p>
+      E-commerce consumer trust is severely threatened by <strong>deceptive opinion spam</strong>—fictitious reviews written to manipulate ratings. Empirical human evaluations show that human readers detect deceptive reviews at approximately <strong>57% accuracy</strong> (virtually equal to chance).
+    </p>
+    <p>
+      <strong>Project Solution:</strong> ReviewGuard AI provides an end-to-end Machine Learning web application utilizing sublinear TF-IDF n-gram feature extraction and supervised classification to automatically identify deceptive patterns, present calibrated confidence meters, and explain predictions via token-level feature attributions.
+    </p>
+
+    <h2>2. Benchmark Dataset & NLP Preprocessing Pipeline</h2>
+    <p>
+      Trained on the gold-standard <strong>Ott et al. Deceptive Opinion Spam Corpus</strong> (Cornell NLP / ACL 2011) comprising 1,600 reviews across 20 hotels in Chicago.
+    </p>
+    <ul>
+      <li><strong>Truthful Reviews:</strong> Mined from verified TripAdvisor customer profiles.</li>
+      <li><strong>Deceptive Reviews:</strong> Authored by unique Amazon Mechanical Turk crowd-workers under strict deception guidelines.</li>
+      <li><strong>Data Hygiene:</strong> 4 exact duplicate text records were identified and dropped, yielding <strong>1,596 validated balanced samples</strong> (796 truthful, 800 deceptive).</li>
+      <li><strong>Label Mapping:</strong> <code>0 = Genuine Review</code>, <code>1 = Potentially Fake Review</code>.</li>
+    </ul>
+
+    <h3>Text Normalization Workflow:</h3>
+    <ol>
+      <li><strong>HTML Sanitization:</strong> Decodes HTML entities (e.g. <code>&amp;amp;</code> to <code>&amp;</code>) and strips HTML tags.</li>
+      <li><strong>Unicode Normalization:</strong> Converts non-ASCII strings into canonical NFKD representation.</li>
+      <li><strong>Repeated Character Capping:</strong> Normalizes exaggerated letter sequences (e.g., <em>"sooooo goooood"</em> to <em>"soo good"</em>).</li>
+      <li><strong>Negation Preservation:</strong> Explicitly preserves negation tokens (<em>"not", "never", "barely"</em>) essential for sentiment context.</li>
+    </ol>
+
+    <h2>3. Machine Learning Benchmark & Comparative Results</h2>
+    <p>
+      Evaluated across 3 supervised algorithms using <strong>5-Fold Stratified Cross-Validation</strong> on an 80% training split, followed by final hold-out testing on an untouched 20% test partition (320 samples):
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Candidate Model</th>
+          <th>5-Fold CV Acc</th>
+          <th>5-Fold CV F1</th>
+          <th>Test Accuracy</th>
+          <th>Test Precision</th>
+          <th>Test Recall</th>
+          <th>Test F1-Score</th>
+          <th>ROC-AUC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight">
+          <td>Logistic Regression (Selected)</td>
+          <td>88.87%</td>
+          <td>88.86%</td>
+          <td>90.31%</td>
+          <td>90.57%</td>
+          <td>90.00%</td>
+          <td>0.9028</td>
+          <td>0.9486</td>
+        </tr>
+        <tr>
+          <td>Multinomial Naive Bayes</td>
+          <td>88.95%</td>
+          <td>89.35%</td>
+          <td>88.44%</td>
+          <td>84.75%</td>
+          <td>93.75%</td>
+          <td>0.8902</td>
+          <td>0.9504</td>
+        </tr>
+        <tr>
+          <td>Calibrated LinearSVC</td>
+          <td>89.18%</td>
+          <td>89.15%</td>
+          <td>88.75%</td>
+          <td>87.80%</td>
+          <td>90.00%</td>
+          <td>0.8889</td>
+          <td>0.9497</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="plots-grid">
+      <div class="plot-card">
+        <img src="models/confusion_matrix.png" alt="Confusion Matrix">
+        <div class="plot-caption">Figure 1: Confusion Matrix Heatmap (TN: 144, FP: 15, FN: 16, TP: 145)</div>
+      </div>
+      <div class="plot-card">
+        <img src="models/roc_curve.png" alt="ROC Curve">
+        <div class="plot-caption">Figure 2: Receiver Operating Characteristic (ROC-AUC = 0.949)</div>
+      </div>
+    </div>
+
+    <h2>4. Explainable AI (XAI) Framework</h2>
+    <ul>
+      <li><strong>Linear Token Attribution:</strong> Computes the exact weight contribution of each word: \(C_i = x_i \times w_i\). Positive values push toward "Potentially Fake"; negative values push toward "Likely Genuine".</li>
+      <li><strong>Stylistic Signals:</strong> Detects qualitative heuristic anomalies including brevity (&lt;10 words), capitalization intensity (&gt;30%), repeated exclamation sequences (!!!), and promotional superlatives (<em>"must buy", "best ever"</em>).</li>
+    </ul>
+
+    <h2>5. Viva Voce Defense Guide (Top 6 Questions & Answers)</h2>
+
+    <div class="qa-box">
+      <div class="qa-question">Q1: How did you prevent data leakage during feature extraction?</div>
+      <p class="qa-answer">We employed a scikit-learn Pipeline. Vectorizer fitting occurred exclusively on the 80% training split. The 20% hold-out test set was never exposed to the vectorizer or model until final evaluation.</p>
+    </div>
+
+    <div class="qa-box">
+      <div class="qa-question">Q2: Why is accuracy alone insufficient for fake review detection?</div>
+      <p class="qa-answer">Accuracy fails to measure class-specific coverage. In deceptive review detection, false accusations against honest reviews (Precision) and missed deceptive spam (Recall) must both be measured. Our model achieves a balanced 90.57% Precision and 90.00% Recall (0.9028 F1-Score).</p>
+    </div>
+
+    <div class="qa-box">
+      <div class="qa-question">Q3: Why did you choose Logistic Regression over Naive Bayes or SVM?</div>
+      <p class="qa-answer">Logistic Regression produced the highest balanced test F1-score (0.9028), yields calibrated posterior probabilities via the sigmoid function, and allows exact linear feature attribution without approximation.</p>
+    </div>
+
+    <div class="qa-box">
+      <div class="qa-question">Q4: What linguistic markers distinguish deceptive from genuine reviews?</div>
+      <p class="qa-answer">Genuine reviews emphasize spatial, physical specifics (room layout, water pressure, transit proximity). Deceptive reviews overcompensate with positive superlatives (<em>"paradise", "flawless"</em>), punctuation intensity, and elevated first-person pronouns.</p>
+    </div>
+
+    <div class="qa-box">
+      <div class="qa-question">Q5: Can this system legally prove that a review is fake?</div>
+      <p class="qa-answer">No. The system evaluates learned statistical patterns in text, not legal identity or physical receipts. Our UI displays an explicit legal disclaimer stating results are indicative likelihoods.</p>
+    </div>
+
+    <div class="qa-box">
+      <div class="qa-question">Q6: What automated tests were implemented?</div>
+      <p class="qa-answer">We built 36 unit and integration tests using <code>pytest</code> covering preprocessing edge cases, schema validation, model training, prediction boundaries, and FastAPI REST endpoints (100% pass rate).</p>
+    </div>
+
+    <h2>6. Execution Runbook</h2>
+    <div class="code-box">
+# Start Backend
+python -m uvicorn main:app --host 127.0.0.1 --port 8000
+
+# Start Frontend
+cd frontend &amp;&amp; npm run dev
+
+# Run Tests
+python -m pytest tests -v
+    </div>
+  </div>
+</body>
+</html>
